@@ -1,0 +1,87 @@
+﻿@model IEnumerable<RRHH.Models.Candidato>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cedula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PuestoAspirado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Departamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SalarioApirado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecomendadoPor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Capacitacion.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Competencia.DescripcionCompetencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Departamento1.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExperienciaLaboral.Empresa)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cedula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PuestoAspirado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Departamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SalarioApirado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecomendadoPor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Capacitacion.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Competencia.DescripcionCompetencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Departamento1.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExperienciaLaboral.Empresa)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdCandidato }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdCandidato }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdCandidato })
+        </td>
+    </tr>
+}
+
+</table>
